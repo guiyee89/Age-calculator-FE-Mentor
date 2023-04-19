@@ -12,5 +12,5 @@
 
 ### Links 🌐
 
-- Live Site URL 🔴: [click!](https://guiyee89.github.io/Age-calculator-app/)
-- My Frontend Mentor profile 👦: [click!](https://www.frontendmentor.io/profile/kacperkwinta)
+- Live Site URL 🔴: [click!](https://github.com/guiyee89/Age-calculator-FE-Mentor)
+- My Frontend Mentor profile 👦: [click!](https://github.com/guiyee89)
