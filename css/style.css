@@ -21,8 +21,8 @@ body {
   width: 59rem;
   background-color: hsl(0, 0%, 100%);
   padding: 3.2rem;
-  border-radius: 3rem;
-  border-bottom-right-radius: 20rem;
+  border-radius: 2.5rem;
+  border-bottom-right-radius: 16rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
