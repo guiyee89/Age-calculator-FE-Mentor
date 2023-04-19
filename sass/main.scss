@@ -1,0 +1,223 @@
+
+///////////////////////////////
+/// COLORS
+///////////////////////////////
+$color-primary-1: hsl(259, 100%, 65%);
+$color-primary-2: hsl(0, 100%, 67%);
+
+$color-neutral-1: hsl(0, 0%, 100%);
+$color-neutral-2: hsl(0, 0%, 94%);
+$color-neutral-3: hsl(0, 0%, 86%);
+$color-neutral-4: hsl(0, 1%, 44%);
+$color-neutral-5: hsl(0, 0%, 8%);
+
+///////////////////////////////
+/// RESET
+///////////////////////////////
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	font-size: 3.2rem;
+	background-color: $color-neutral-2;
+}
+
+///////////////////////////////
+/// BOX
+///////////////////////////////
+.box {
+	margin: 10rem auto;
+	width: 59rem;
+	background-color: $color-neutral-1;
+	padding: 3.2rem;
+	border-radius: 3rem;
+	border-bottom-right-radius: 20rem;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.wrapper-inputs {
+	display: flex;
+	gap: 2.4rem;
+
+	span {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+}
+
+input {
+	max-width: 12.6rem;
+	border-radius: 4px;
+	border: 1px solid $color-neutral-3;
+	padding: 0.6rem 1.2rem;
+	font-size: 3rem;
+	outline: none;
+	transition: all 0.2s ease;
+
+	&:focus {
+		border: 1px solid $color-primary-1;
+	}
+}
+
+// delete default input number controls in Chrome
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+// firefox
+input[type="number"] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+label {
+	text-transform: uppercase;
+	color: $color-neutral-4;
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+}
+
+.input-error--message {
+	font-size: 1.2rem;
+	color: $color-primary-2;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.input-error--border {
+	border: 1px solid $color-primary-2;
+}
+
+.input-error--label {
+	color: $color-primary-2;
+}
+
+.wrapper-button {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.line {
+	height: 1px;
+	width: 100%;
+	background-color: $color-neutral-2;
+}
+
+.line--hidden {
+	display: none;
+}
+
+.btn {
+	border: none;
+	border-radius: 50%;
+	padding: 1.6rem;
+	background-color: $color-primary-1;
+	cursor: pointer;
+	transition: all 0.1s ease;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		height: 4rem;
+		width: 4rem;
+	}
+
+	&:hover {
+		background-color: $color-neutral-5;
+	}
+
+	&:active {
+		transform: translateY(4px);
+	}
+}
+
+.wrapper-result {
+	line-height: 1;
+	font-style: italic;
+	font-size: 7rem;
+	font-weight: 800;
+}
+
+.years,
+.months,
+.days {
+	color: $color-primary-1;
+}
+
+.attribution {
+	font-style: italic;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+///////////////////////////////
+/// BELOW 600 PX
+@media only screen and (max-width: 37.5em) {
+	html {
+		font-size: 50%;
+	}
+	body {
+		padding: 1rem;
+	}
+
+	.box {
+		margin: 12.6rem auto;
+		margin-bottom: 2.4rem;
+		width: 100%;
+	}
+
+	.wrapper-inputs {
+		justify-content: center;
+	}
+
+	.wrapper-button {
+		margin: 2.4rem auto;
+
+		.line--hidden {
+			display: block;
+		}
+	}
+
+	.btn {
+		padding: 2rem;
+
+		img {
+			height: 3.2rem;
+			width: 3.2rem;
+		}
+	}
+}
+
+///////////////////////////////
+/// BELOW 375 PX
+@media only screen and (max-width: 23.4375em) {
+	html {
+		font-size: 45%;
+	}
+
+	input {
+		max-width: 9.6rem;
+		font-size: 2.4rem;
+	}
+
+	.wrapper-result {
+		font-size: 6rem;
+	}
+}
